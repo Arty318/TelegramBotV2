@@ -9,12 +9,23 @@ def get_main_page():
 <head>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
-        body, iframe { margin:0; padding:0; width:100%; height:100vh; border:none; }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <iframe src="https://www.deepseek.com/"></iframe>
     <script>
+        Telegram.WebApp.ready();
         Telegram.WebApp.expand();
     </script>
 </body>
